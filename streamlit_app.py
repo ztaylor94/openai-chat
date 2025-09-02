@@ -18,6 +18,11 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
+if prompt := st.chat_input():
+    if not openai.api_key:
+        st.info("Please add your OpenAI API key to continue.")
+        st.stop()
+
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
