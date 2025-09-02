@@ -1,4 +1,4 @@
-.# Code refactored from https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps
+# Code refactored from https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps
 
 from openai import OpenAI
 import streamlit as st
